@@ -1,0 +1,92 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+xmlns:pro="http://www.liquibase.org/xml/ns/pro" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd http://www.liquibase.org/xml/ns/dbchangelog 
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+  <changeSet author="SteveZ" id="exec_sales3.sql" context="test" labels="pipeline1">
+      <sqlFile dbms="postgresql"
+              path="ddl/exec_sales3.sql"
+              relativeToChangelogFile="true"
+              splitStatements="false"
+              stripComments="true"/>
+     <rollback>
+       <sqlFile dbms="postgresql"
+               path="ddl/dropExec_sales3_rollback.sql"
+               relativeToChangelogFile="true"
+               splitStatements="false"
+               stripComments="true"/>
+     </rollback>
+  </changeSet>
+  <changeSet author="SteveZ" id="createView_myview3.sql" context="test" labels="pipeline1">
+      <sqlFile dbms="postgresql"
+              path="views/createView_myview3.sql"
+              relativeToChangelogFile="true"
+              splitStatements="false"
+              stripComments="true"/>
+     <rollback>
+       <sqlFile dbms="postgresql"
+               path="views/dropView_myview3_rollback.sql"
+               relativeToChangelogFile="true"
+               splitStatements="false"
+               stripComments="true"/>
+     </rollback>
+  </changeSet>
+  <changeSet author="SteveZ" id="createView_newview3.sql" context="test" labels="pipeline1">
+      <sqlFile dbms="postgresql"
+              path="views/createView_newview3.sql"
+              relativeToChangelogFile="true"
+              splitStatements="false"
+              stripComments="true"/>
+     <rollback>
+       <sqlFile dbms="postgresql"
+               path="views/dropView_newview3_rollback.sql"
+               relativeToChangelogFile="true"
+               splitStatements="false"
+               stripComments="true"/>
+     </rollback>
+  </changeSet>
+  <changeSet author="SteveZ" id="salesTable3.sql" context="test" labels="pipeline1">
+      <sqlFile dbms="postgresql"
+              path="ddl/salesTable3.sql"
+              relativeToChangelogFile="true"
+              splitStatements="false"
+              stripComments="true"/>
+     <rollback>
+       <sqlFile dbms="postgresql"
+               path="ddl/dropSalesTable3_rollback.sql"
+               relativeToChangelogFile="true"
+               splitStatements="false"
+               stripComments="true"/>
+     </rollback>
+  </changeSet>
+  <changeSet author="SteveZ" id="func_kunden3.sql" context="test" labels="pipeline1">
+      <sqlFile dbms="postgresql"
+              path="functions/func_kunden3.sql"
+              relativeToChangelogFile="true"
+              splitStatements="false"
+              stripComments="true"/>
+     <rollback>
+       <sqlFile dbms="postgresql"
+               path="functions/dropFunc_kunden3_rollback.sql"
+               relativeToChangelogFile="true"
+               splitStatements="false"
+               stripComments="true"/>
+     </rollback>
+  </changeSet>
+  <changeSet author="SteveZ" id="plusOne3.sql" context="test" labels="pipeline1">
+      <sqlFile dbms="postgresql"
+              path="functions/plusOne3.sql"
+              relativeToChangelogFile="true"
+              splitStatements="false"
+              stripComments="true"/>
+     <rollback>
+       <sqlFile dbms="postgresql"
+               path="functions/dropPlusOne3_rollback.sql"
+               relativeToChangelogFile="true"
+               splitStatements="false"
+               stripComments="true"/>
+     </rollback>
+  </changeSet>
+</databaseChangeLog>
