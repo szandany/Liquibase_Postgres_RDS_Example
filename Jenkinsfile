@@ -48,7 +48,7 @@ agent any
           echo "------------------------------------"
           echo "----------liquibase status----------"
           echo "------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP status
+          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP status --verbose
           echo "---------------------------------------------"
           echo "----------liquibase rollbackCount=2----------"
           echo "---------------------------------------------"
@@ -57,10 +57,18 @@ agent any
           echo "----------liquibase updateSQL----------"
           echo "---------------------------------------"
           liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP updateSQL
+          echo "---------------------------------------------"
+          echo "----------liquibase tag database with version1----------"
+          echo "---------------------------------------------"
+          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP tag version1
           echo "------------------------------------"
           echo "----------liquibase update----------"
           echo "------------------------------------"
           liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP update
+          echo "---------------------------------------------"
+          echo "----------liquibase rollback to version1----------"
+          echo "---------------------------------------------"
+          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP rollback version1
         '''
       } // steps
     }   // Environment stage
