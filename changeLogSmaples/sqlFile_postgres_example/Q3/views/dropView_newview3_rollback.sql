@@ -1,1 +1,0 @@
-DROP VIEW newview3;
