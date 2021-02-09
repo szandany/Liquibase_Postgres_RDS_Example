@@ -46,4 +46,10 @@ jobs:
           unzip -o -d liquibase liquibase-4.2.0.zip
           ./liquibase/liquibase --version
           ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres --logLevel=FINE --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres status --verbose
+          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres --logLevel=FINE --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres updateSQL
+          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres --logLevel=FINE --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres tag version1
+          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres --logLevel=FINE --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres update
+          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres --logLevel=FINE --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres rollback version1
+          
+
           
