@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.0.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <changeSet author="support.liquibase.net (generated)" id="1587580817300-1">
+        <createTable tableName="execSales">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="test1_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="support.liquibase.net (generated)" id="1587580817300-2">
+        <createView fullDefinition="false" viewName="myView2"> SELECT "execSales".id,
+    "execSales".name
+   FROM "execSales";</createView>
+    </changeSet>
+    <changeSet author="support.liquibase.net (generated)" id="1587580817300-3">
+        <createView fullDefinition="false" viewName="newView"> SELECT "execSales".id,
+    "execSales".name
+   FROM "execSales";</createView>
+    </changeSet>
+    <changeSet author="support.liquibase.net (generated)" id="1587580817300-4">
+        <createTable tableName="salesTable">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(20)"/>
+            <column name="region" type="VARCHAR(20)"/>
+            <column name="market" type="VARCHAR(20)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="support.liquibase.net (generated)" id="1587580817300-5">
+        <pro:createFunction functionName="func_kunden" path="objects/function/func_kunden().sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet author="support.liquibase.net (generated)" id="1587580817300-6">
+        <pro:createFunction functionName="plusOne" path="objects/function/plusOne(val integer).sql" relativeToChangelogFile="true"/>
+    </changeSet>
+</databaseChangeLog>

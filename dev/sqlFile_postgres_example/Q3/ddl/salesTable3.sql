@@ -1,0 +1,1 @@
+CREATE TABLE "salesTable3" (id INTEGER NOT NULL, name VARCHAR(20), region VARCHAR(20), market VARCHAR(20));

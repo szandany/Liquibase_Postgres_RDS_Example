@@ -1,0 +1,2221 @@
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1587579148509-1",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "inbound_order_details_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "best_by_date",
+                  "type": "TIMESTAMP WITHOUT TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "code_date",
+                  "type": "TIMESTAMP WITHOUT TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "country_of_origin",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_line_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_line_reference",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "expiration_date",
+                  "type": "TIMESTAMP WITHOUT TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "gross_weight",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "hold_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_order_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "item_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "line_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "lot_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "net_weight",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "notes",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "pallet_count",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "production_date",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "quantity",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "reservation_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "shelf_life_days",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "slaughter_date",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_row_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_system_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_facility_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_order_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "_version",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_lot_reference",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "lot_reference",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              }]
+            ,
+            "tableName": "inbound_order_details_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-2",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "appointment_orders_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "appointment_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "stop_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "order_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              }]
+            ,
+            "tableName": "appointment_orders_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-3",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "inbound_orders_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "carrier_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "check_quantity",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "client_system_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "comments",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "edi_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "expected_receive_datetime_end",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "expected_receive_datetime_start",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "external_ref",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "finish_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "gtxn_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_order_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "is_quick_receive",
+                  "type": "BOOLEAN"
+                }
+              },
+              {
+                "column": {
+                  "name": "notes",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "order_confirmation_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "order_status",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_address_line1",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_address_line2",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_address_line3",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_city",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_country",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_email",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_fax",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_location_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_location_name",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_party_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_phone",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_state",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "origin_zip",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "purchase_order_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "received_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "scan_finish_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "scan_start_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "signin_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "signout_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_row_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_system_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "start_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "supplier_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "transportation_method",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "version_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_facility_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_gross_weight",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_order_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "lineage_transmission_id",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "_version",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "actor",
+                  "type": "VARCHAR(255)"
+                }
+              }]
+            ,
+            "tableName": "inbound_orders_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-4",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "outbound_order_details_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_system_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_facility_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_order_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "line_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "item_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "lot_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_row_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_line_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "ti_override",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "high_override",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_line_reference",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "shelf_life_date",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "shelf_life_days",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "quantity",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "pallet_count",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "gross_weight",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "net_weight",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "position_in_truck",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "notes",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "reservation_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "pick_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "label_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "sticker_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "outbound_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "outbound_order_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "_version",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "lot_reference",
+                  "type": "VARCHAR(255)"
+                }
+              }]
+            ,
+            "tableName": "outbound_order_details_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-5",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "outbound_orders_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_system_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_facility_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_order_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_row_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "comments",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "notes",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "requested_delivery_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "actual_delivery_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "pallet_exchange_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "payment_method_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "sales_order_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "shipped_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "transportation_method",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "lading_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "check_quantity",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_gross_weight",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "weight_uom",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "requested_pallet_platform_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "stop_sequence_number",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "carrier_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "stop_location_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "client_system_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_location_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_location_name",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_address_line1",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_address_line2",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_address_line3",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_city",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_state",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_country",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_zip",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_email",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_phone",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "destination_fax",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "gtxn_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "order_status",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "outbound_order_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "version_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "external_ref",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "requested_pickup_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "lineage_transmission_id",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "order_confirmation_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "_version",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "actor",
+                  "type": "VARCHAR(255)"
+                }
+              }]
+            ,
+            "tableName": "outbound_orders_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-6",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "outbound_loads_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_facility_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_system_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "actual_carrier_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "tender_carrier_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "gross_weight_without_platforms",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "gross_weight_with_platforms",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "volume",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "volume_uom",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "arrival_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_start_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_finish_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "signin_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "signout_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "shipped_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "requested_delivery_date",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "payment_method_type",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "expected_ship_datetime_start",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "expected_ship_datetime_end",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "average_temperature",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "front_temperature",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "middle_temperature",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "back_temperature",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_reference_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "trailer_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "trailer_load_type",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_load_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "number_of_stops",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "is_planned_lineage",
+                  "type": "BOOLEAN"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_row_id",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "appointment_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_outbound",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "dock_door_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_start_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "requested_pull_time",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_end_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "confirmation_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "confirmed_by",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "original_scheduled_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_name",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_phone_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "mrs_loadid_sequence",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "carrier_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "pallet_exchange_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "weight",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "weight_uom",
+                  "type": "VARCHAR(255)"
+                }
+              }]
+            ,
+            "tableName": "outbound_loads_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-7",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "appointments_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "facility_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_system_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "appointment_confirmation_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_outbound",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "dock_door_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_start_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_end_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "original_scheduled_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "requested_pull_time",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_row_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "confirmation_datetime",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "confirmed_by",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_customer_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "trailer_load_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_datetime",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_duration",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "comments",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "carrier_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "appointment_contact_name",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "appointment_contact_phone",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "appointment_contact_email",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "trailer_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "lineage_transmission_id",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_name",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_phone_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_license_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_license_state_of_issue",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "actor",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "gtxn_id",
+                  "type": "VARCHAR(255)"
+                }
+              }]
+            ,
+            "tableName": "appointments_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-8",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "inbound_order_reference_codes_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_order_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "reference_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "reference_value",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              }]
+            ,
+            "tableName": "inbound_order_reference_codes_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-9",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "inbound_loads_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "warehouse_facility_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_system_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "actual_carrier_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "tender_carrier_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "gross_weight_without_platforms",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "gross_weight_with_platforms",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "volume",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "received_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "arrival_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_start_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_finish_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "signin_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "front_temperature",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "middle_temperature",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "back_temperature",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "load_reference_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "trailer_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "trailer_load_type",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "customer_load_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "is_planned_lineage",
+                  "type": "BOOLEAN"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_name",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "source_row_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "appointment_number",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "inbound_outbound",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "dock_door_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_start_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "requested_pull_time",
+                  "type": "FLOAT8"
+                }
+              },
+              {
+                "column": {
+                  "name": "scheduled_end_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "confirmation_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "confirmed_by",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "volume_uom",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "original_scheduled_datetime",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "signout_datetime",
+                  "type": "TEXT"
+                }
+              },
+              {
+                "column": {
+                  "name": "mrs_loadid_sequence",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "expected_arrival_datetime_start",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "expected_arrival_datetime_end",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "pallet_exchange_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "driver_phone_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "carrier_code",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "weight",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "weight_uom",
+                  "type": "VARCHAR(255)"
+                }
+              }]
+            ,
+            "tableName": "inbound_loads_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-10",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "outbound_order_reference_codes_staging_pkey"
+                  },
+                  "name": "id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "outbound_order_id",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "outbound_id",
+                  "type": "INTEGER"
+                }
+              },
+              {
+                "column": {
+                  "name": "reference_type",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "reference_value",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              }]
+            ,
+            "tableName": "outbound_order_reference_codes_staging"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-11",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "constraints": {
+                    "primaryKey": true,
+                    "primaryKeyName": "drivers_raw_pkey"
+                  },
+                  "name": "driver_id",
+                  "type": "BIGINT"
+                }
+              },
+              {
+                "column": {
+                  "name": "name",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "phone_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "license_number",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "license_state_of_issue",
+                  "type": "VARCHAR(255)"
+                }
+              },
+              {
+                "column": {
+                  "name": "created_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "updated_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              },
+              {
+                "column": {
+                  "name": "deleted_at",
+                  "type": "TIMESTAMP WITH TIME ZONE"
+                }
+              }]
+            ,
+            "tableName": "drivers_raw"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-12",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createView": {
+            "fullDefinition": false,
+            "selectQuery": " SELECT a.id,\n    a.facility_id,\n    a.source_system_id,\n    a.appointment_confirmation_number,\n    a.load_id,\n    a.inbound_outbound,\n    a.dock_door_number,\n    a.scheduled_start_datetime,\n    a.scheduled_end_datetime,\n    a.original_scheduled_datetime,\n    a.requested_pull_time,\n    a.source_row_id,\n    a.updated_at,\n    a.deleted_at,\n    a.created_at,\n    a.confirmation_datetime,\n    a.confirmed_by,\n    a.warehouse_customer_id,\n    a.trailer_load_type,\n    a.scheduled_datetime,\n    a.scheduled_duration,\n    a.comments,\n    a.carrier_code,\n    a.appointment_contact_name,\n    a.appointment_contact_phone,\n    a.appointment_contact_email,\n    a.trailer_number\n   FROM appointments_staging a;",
+            "viewName": "appointments_staging_view"
+          }
+        }]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1587579148509-13",
+      "author": "arbazkhan.k (generated)",
+      "changes": [
+        {
+          "createView": {
+            "fullDefinition": false,
+            "selectQuery": " SELECT drivers_raw.driver_id,\n    drivers_raw.name,\n    drivers_raw.phone_number\n   FROM drivers_raw;",
+            "viewName": "drivers"
+          }
+        }]
+      
+    }
+  }
+  
+]}

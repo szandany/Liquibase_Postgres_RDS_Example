@@ -1,0 +1,1 @@
+CREATE TABLE exec_sales3 (id INTEGER NOT NULL, name VARCHAR(255), CONSTRAINT test13_pkey PRIMARY KEY (id));
