@@ -41,5 +41,5 @@ jobs:
           curl -L https://github.com/liquibase/liquibase/releases/download/v4.2.0/liquibase-4.2.0.zip --output liquibase-4.2.0.zip
           unzip -o -d liquibase liquibase-4.2.0.zip
           ./liquibase/liquibase --version
-          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://postgres:5432/postgres --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres status --verbose
+          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://localhost:5432/postgres --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres status --verbose
           
