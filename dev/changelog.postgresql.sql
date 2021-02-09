@@ -8,6 +8,13 @@ CREATE TABLE contacts (
 );
 --rollback drop table contacts;
 
+-- changeset SteveZ:1612836238049-createtableactor
+CREATE TABLE actor 
+(
+  "Name" CHAR(1)
+);
+--rollback drop table actor;
+
 --changeset MikeO:45556-altertableactor
 ALTER TABLE actor
   ADD COLUMN twitter VARCHAR(15);
