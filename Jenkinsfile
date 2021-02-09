@@ -50,9 +50,9 @@ agent any
           echo "------------------------------------"
           liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP status --verbose
           echo "---------------------------------------------"
-          echo "----------liquibase rollbackCount=2----------"
+          echo "----------liquibase rollbackCount=5----------"
           echo "---------------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP rollbackCount 2
+          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP rollbackCount 5
           echo "---------------------------------------"
           echo "----------liquibase updateSQL----------"
           echo "---------------------------------------"
