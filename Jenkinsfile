@@ -65,6 +65,10 @@ agent any
           echo "----------liquibase update----------"
           echo "------------------------------------"
           liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP update
+          echo "------------------------------------"
+          echo "----------liquibase diff with lower environment----------"
+          echo "------------------------------------"
+          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --referenceUrl=$Postgres_RDS_DIFF_URL --referenceUsername=${Postgres_RDS_USERNAME} --referencePassword=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP update
           echo "---------------------------------------------"
           echo "----------liquibase rollback to version1----------"
           echo "---------------------------------------------"
