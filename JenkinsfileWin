@@ -39,36 +39,32 @@ agent any
    stage ('liquibase commands'){
       steps {
         bat '''
-          cd %PROJ%/%ENVIRONMENT_STEP%
-          liquibase --version
+          cd %PROJ%
+          call liquibase --version
           echo "------------------------------------"
           echo "----------liquibase status----------"
           echo "------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP status --verbose
+          call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP% --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar status --verbose
           echo "---------------------------------------------"
           echo "----------liquibase rollbackCount=5----------"
           echo "---------------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP rollbackCount 5
+          call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP% --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar rollbackCount 5
           echo "---------------------------------------"
           echo "----------liquibase updateSQL----------"
           echo "---------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP updateSQL
+          call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar updateSQL
           echo "---------------------------------------------"
           echo "----------liquibase tag database with version1----------"
           echo "---------------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP tag version1
+          call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar tag version1
           echo "------------------------------------"
           echo "----------liquibase update----------"
           echo "------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP update
+          call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar update
           echo "------------------------------------------------------------"
-          echo "----------liquibase diff with upper QA environment----------"
-          echo "------------------------------------------------------------"
-          liquibase --referenceUrl=${Postgres_RDS_URL} --referenceUsername=${Postgres_RDS_USERNAME} --referencePassword=${Postgres_RDS_PASSWORD} --url=$Postgres_RDS_DIFF_URL --username=${Postgres_RDS_DIFF_USERNAME} --password=${Postgres_RDS_DIFF_PASSWORD} --contexts=$ENVIRONMENT_STEP diff
-          echo "---------------------------------------------"
           echo "----------liquibase rollback to version1----------"
           echo "---------------------------------------------"
-          liquibase --url=${Postgres_RDS_URL} --username=${Postgres_RDS_USERNAME} --password=${Postgres_RDS_PASSWORD} --contexts=$ENVIRONMENT_STEP rollback version1
+          call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar rollback version1
         '''
       } // steps
     }   // Environment stage
