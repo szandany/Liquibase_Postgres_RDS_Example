@@ -58,8 +58,8 @@ agent any
           echo "------------------------------------"
           call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar update
           echo "------------------------------------------------------------"
-          echo "----------liquibase rollback to version1----------"
-          echo "---------------------------------------------"
+          echo "----------liquibase rollback to version1--------------------"
+          echo "------------------------------------------------------------"
           call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar rollback version1
         '''
       } // steps
