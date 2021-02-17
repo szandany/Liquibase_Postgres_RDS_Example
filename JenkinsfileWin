@@ -45,17 +45,13 @@ agent any
           echo "----------liquibase status----------"
           echo "------------------------------------"
           call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP% --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar status --verbose
-          echo "---------------------------------------------"
-          echo "----------liquibase rollbackCount=5----------"
-          echo "---------------------------------------------"
-          call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP% --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar rollbackCount 5
           echo "---------------------------------------"
           echo "----------liquibase updateSQL----------"
           echo "---------------------------------------"
           call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar updateSQL
-          echo "---------------------------------------------"
+          echo "--------------------------------------------------------"
           echo "----------liquibase tag database with version1----------"
-          echo "---------------------------------------------"
+          echo "--------------------------------------------------------"
           call liquibase --url=%Postgres_RDS_URL% --username=%Postgres_RDS_USERNAME% --password=%Postgres_RDS_PASSWORD% --contexts=%ENVIRONMENT_STEP%  --changeLogFile=changelog.postgresql.sql --classpath=postgresql-42.2.8.jar tag version1
           echo "------------------------------------"
           echo "----------liquibase update----------"
