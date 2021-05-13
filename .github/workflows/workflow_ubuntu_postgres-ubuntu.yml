@@ -55,8 +55,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run Liquibase Commands
         run: |
-          curl -L https://github.com/liquibase/liquibase/releases/download/v4.2.0/liquibase-4.2.0.zip --output liquibase-4.2.0.zip
-          unzip -o -d liquibase liquibase-4.2.0.zip
+          curl -L https://github.com/liquibase/liquibase/releases/download/v4.3.5/liquibase-4.3.5.zip --output liquibase-4.3.5.zip
+          unzip -o -d liquibase liquibase-4.3.5.zip
           ./liquibase/liquibase --version
           ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres_dev --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres status --verbose
           ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres_dev --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres updateSQL
