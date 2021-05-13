@@ -62,8 +62,7 @@ jobs:
           ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres_dev --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres updateSQL
           ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres_dev --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres tag version1
           ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres_dev --logLevel=FINE --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres update
-          # ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres_dev --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres rollback version1
-          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5433/postgres_test --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres diff
+          ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5432/postgres_dev --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres rollback version1
           ./liquibase/liquibase --changeLogFile=./changelog.postgresql.sql --url=jdbc:postgresql://127.0.0.1:5433/postgres_test --classpath=./postgresql-42.2.8.jar --username=postgres --password=postgres status --verbose
 
           
