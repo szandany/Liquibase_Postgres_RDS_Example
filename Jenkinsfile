@@ -9,7 +9,7 @@ agent any
     GITURL="https://github.com/szandany"
     ENVIRONMENT_STEP="${params.step}"
     BRANCH="${params.pipeline}"
-    PATH="/Users/support.liquibase.net/liquibase:$PATH"
+    PATH="/root/liquibase:$PATH"
   }
   stages {
 
@@ -29,7 +29,7 @@ agent any
         // checkout Liquibase project from repo
         sh '''
           { set +x; } 2>/dev/null
-          cd /Users/support.liquibase.net/workspace
+          cd /root/workspace
           if [ -d "$PROJ" ]; then rm -Rf $PROJ; fi
           git clone ${GITURL}/${PROJ}.git
           cd ${PROJ}
@@ -43,7 +43,7 @@ agent any
       steps {
         sh '''
           { set +x; } 2>/dev/null
-          cd /Users/support.liquibase.net/workspace/${PROJ}/${ENVIRONMENT_STEP}
+          cd /root/workspace/${PROJ}/${ENVIRONMENT_STEP}
           liquibase --version
           echo "------------------------------------"
           echo "----------liquibase status----------"
@@ -82,7 +82,7 @@ agent any
              sh '''
                { set +x; } 2>/dev/null
                echo "Deleting project workspace..."
-               cd /Users/support.liquibase.net/workspace && rm -r ${PROJ}
+               cd /root/workspace && rm -r ${PROJ}
              '''
            } // steps
          }   // Deleting project workspace
