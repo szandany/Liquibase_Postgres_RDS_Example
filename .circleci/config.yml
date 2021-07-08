@@ -12,10 +12,11 @@ jobs:
     docker:
       - image: liquibase/liquibase:4.4.0
 # Service container image available at `host: localhost`
-      - image: postgres:9.6-jessie
+      - image: postgres:latest
         environment:
           POSTGRES_USER: root
           POSTGRES_DB: test
+          POSTGRES_PASSWORD: password
           
     steps:
       # Checkout the code as the first step.
