@@ -30,6 +30,7 @@ jobs:
           name: Test
           command: |
              /liquibase/liquibase --version
+             sleep 30
              /liquibase/liquibase --url=jdbc:postgresql://localhost:5432/test --username=root --password=password --changeLogFile=./changelog.postgresql.sql --classpath=./postgresql-42.2.8.jar status --verbose
              /liquibase/liquibase --url=jdbc:postgresql://localhost:5432/test --username=root --password=password --changeLogFile=./changelog.postgresql.sql --classpath=./postgresql-42.2.8.jar update
              /liquibase/liquibase --url=jdbc:postgresql://localhost:5432/test --username=root --password=password --changeLogFile=./changelog.postgresql.sql --classpath=./postgresql-42.2.8.jar history
