@@ -11,6 +11,15 @@ jobs:
     # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/openjdk
     docker:
       - image: liquibase/liquibase:4.4.0
+# Service container image available at `host: localhost`
+      - image: circleci/postgres:9.6.2-alpine
+        auth:
+          username: user1
+          password: password
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_DB: test
+          
     steps:
       # Checkout the code as the first step.
       - checkout
@@ -23,6 +32,7 @@ jobs:
           name: Test
           command: |
              /liquibase/liquibase --version
+             /liquibase/liquibase --url=jdbc:postgresql://localhost:5432/test --username=root --password=password --changeLogFile=./changelog.postgresql.sql --classpath=./postgresql-42.2.8.jar status --verbose
 
 workflows:
   # Below is the definition of your workflow.
