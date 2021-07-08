@@ -31,7 +31,7 @@ jobs:
           command: |
              /liquibase/liquibase --version
              /liquibase/liquibase --url=jdbc:postgresql://localhost:5432/test --username=root --password=password --changeLogFile=./changelog.postgresql.sql --classpath=./postgresql-42.2.8.jar status --verbose
-             /liquibase/liquibase --url=jdbc:postgresql://localhost:5432/test --username=root --password=password --changeLogFile=./changelog.postgresql.sql --classpath=./postgresql-42.2.8.jar --logLevel=info update
+             /liquibase/liquibase --url=jdbc:postgresql://localhost:5432/test --username=root --password=password --changeLogFile=./changelog.postgresql.sql --classpath=./postgresql-42.2.8.jar updateSQL
 
 workflows:
   # Below is the definition of your workflow.
