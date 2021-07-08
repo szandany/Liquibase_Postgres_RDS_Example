@@ -13,9 +13,6 @@ jobs:
       - image: liquibase/liquibase:4.4.0
 # Service container image available at `host: localhost`
       - image: postgres:9.6-jessie
-        auth:
-          username: user1
-          password: password
         environment:
           POSTGRES_USER: root
           POSTGRES_DB: test
